@@ -1,8 +1,3 @@
-//
-// Change all references to 'MyComponent' in this file to your real component name!
-//
-
-// bundled component styling
 import './main.scss';
 
 import React from 'react';
@@ -17,7 +12,7 @@ const translations = {
   'fr' : frJson
 };
 
-export default class MyComponent {
+export default class avatarDisplay {
 
   constructor(config) {
 
@@ -28,13 +23,14 @@ export default class MyComponent {
   init(config) {
 
     const locale = config.locale ? config.locale : 'en';
+    config.avatarStyle = 'round';  //hardcoded for now, remove when we officially support square avatars
 
     ReactDOM.render(
       <IntlProvider locale={locale} messages={translations[locale]}>
         <ComponentOwner data={config} />
-      </IntlProvider>,
-      document.getElementById(config.elementId)
+      </IntlProvider>
     );
+    document.getElementById(config.elementId);
   }
 
 }
@@ -42,4 +38,4 @@ export default class MyComponent {
 //
 // For events, use the Origami naming convention of pre-pending with 'o.'
 //
-document.body.addEventListener('o.InitMyComponent', e => new MyComponent(e.detail));
+document.body.addEventListener('o.InitAvatarDisplay', e => new avatarDisplay(e.detail));

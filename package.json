@@ -1,7 +1,7 @@
 {
-  "name": "",
-  "version": "0.0.0",
-  "description": "",
+  "name": "@pearson-components/avatar-display",
+  "version": "0.0.1",
+  "description": "component to display avatar image",
   "main": "./main.js",
   "scripts": {
     "dev-setup": "mkdir -p fonts && cp ./node_modules/pearson-elements/dist/fonts/* ./fonts && cp ./node_modules/pearson-elements/dist/css/elements.css ./demo",
