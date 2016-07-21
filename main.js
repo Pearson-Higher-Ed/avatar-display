@@ -12,7 +12,7 @@ const translations = {
   'fr' : frJson
 };
 
-export default class avatarDisplay {
+export default class AvatarDisplay {
 
   constructor(config) {
 
@@ -28,9 +28,9 @@ export default class avatarDisplay {
     ReactDOM.render(
       <IntlProvider locale={locale} messages={translations[locale]}>
         <ComponentOwner data={config} />
-      </IntlProvider>
+      </IntlProvider>,
+      document.getElementById(config.elementId)
     );
-    document.getElementById(config.elementId);
   }
 
 }
@@ -38,4 +38,4 @@ export default class avatarDisplay {
 //
 // For events, use the Origami naming convention of pre-pending with 'o.'
 //
-document.body.addEventListener('o.InitAvatarDisplay', e => new avatarDisplay(e.detail));
+document.body.addEventListener('o.InitAvatarDisplay', e => new AvatarDisplay(e.detail));

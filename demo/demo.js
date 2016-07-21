@@ -1,4 +1,4 @@
-import avatarDisplay from '../main'; // to demo direct API usage
+import AvatarDisplay from '../main'; // to demo direct API usage
 
 // When available on npm, consumer usage would be similar to:
 // import avatarDisplay from '@pearson-components/avatar-display'
@@ -16,7 +16,7 @@ function init() {
   }));
 
   // Demo direct API
-  new avatarDisplay({
+  new AvatarDisplay({
     elementId: 'demo-target2',
     avatarAltText: 'Large Avatar Image',
     avatarSize: 'large'
