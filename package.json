@@ -14,13 +14,14 @@
     "version": "npm run gen-changelog && git add CHANGELOG.md",
     "ci": "npm test && npm run build",
     "release": "node ./npm_scripts/release.js",
-    "verify": "node ./npm_scripts/verify.js"
+    "verify": "node ./npm_scripts/verify.js",
+    "postpublish": "npm access public && echo 'Package scope set to public!'"
   },
-  "author": "",
+  "author": "pearson-design-accelerator@pearson.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pearson-Higher-Ed/"
+    "url": "https://github.com/Pearson-Higher-Ed/avatar-display.git"
   },
   "dependencies": {
     "react-intl": "~2.0.1"
