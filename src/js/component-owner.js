@@ -8,13 +8,20 @@ class ComponentOwner extends React.Component {
     avatarURLText: PropTypes.string,
     avatarAltText: intlShape,
     avatarStyle: PropTypes.string,
-    avatarSize: PropTypes.string
+    avatarSize: PropTypes.string,
+    avatarClick: PropTypes.func
   };
 
   constructor(props) {
 
     super(props);
   }
+
+  _click = () => {
+    if (this.props.data.avatarClick) {
+      this.props.data.avatarClick();
+    }
+  };
 
   render() {
 
@@ -35,12 +42,13 @@ class ComponentOwner extends React.Component {
     }
 
     return (
-      // Insert HTML for avatar-display here
       <img src={this.props.data.avatarURLText}
            className={imageStyle}
            height={imageSize}
            width={imageSize}
-           alt={altTextMsg} />
+           alt={altTextMsg}
+           tabIndex="0"
+           onClick={this._click} />
     )
   }
 

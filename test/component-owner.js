@@ -9,7 +9,7 @@ import ComponentOwner from '../src/js/component-owner';
 
 expect.extend(expectJSX);
 
-describe('Component Owner Suite', () => {
+describe('Component Owner Suite (avatar-display)', () => {
   let renderer;
   let intlProvider;
 
@@ -23,7 +23,12 @@ describe('Component Owner Suite', () => {
     const {intl} = intlProvider.getChildContext();
     const targetData = {
       elementId: 'test-target',
-      greeting: 'Hello world!'
+      avatarURLText: 'http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
+      avatarAltText: 'Small Avatar Image',
+      avatarSize: 'small',
+      avatarClick: function () {
+        console.log('test');
+      }
     };
 
     renderer.render(
@@ -34,19 +39,22 @@ describe('Component Owner Suite', () => {
     );
 
     expect(renderer.getRenderOutput()).toEqualJSX(
-      <div className="pe-inlineblock"><button className="pe-btn pe-btn--primary" onClick={function noRefCheck() {}}>say hello</button>
-        &nbsp;
-        <span className="pe-input"><input type="text" value="" placeholder="placeholder" /></span>
-      </div>
+      <img src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' className='avatar-display-img' height={50} width={50} tabIndex="0" onClick={function noRefCheck() {}} alt='Small Avatar Image' />
     );
   });
 
-  it('renders the correct text when the button is clicked, in a document provided by jsdom', () => {
+  it('calls the click handler function when the avatar is clicked, in a document provided by jsdom', () => {
 
     const {intl} = intlProvider.getChildContext();
+    let testValue = 0;
     const targetData = {
       elementId: 'test-target',
-      greeting: 'Hello test!'
+      avatarURLText: 'http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
+      avatarAltText: 'Small Avatar Image',
+      avatarSize: 'small',
+      avatarClick: function () {
+        testValue = 1;
+      }
     };
     const locale = 'en';
     const translations = {
@@ -54,10 +62,9 @@ describe('Component Owner Suite', () => {
     };
 
     const container = TestUtils.renderIntoDocument(<IntlProvider locale={locale} messages={translations[locale]}><ComponentOwner data={targetData} intl={intl} /></IntlProvider>);
-    const button = TestUtils.findRenderedDOMComponentWithTag(container, 'button');
-    const input =  TestUtils.findRenderedDOMComponentWithTag(container, 'input');
-    TestUtils.Simulate.click(button);
-    expect(input.value).toEqual('Hello test!');
+    const testAvatar = TestUtils.findRenderedDOMComponentWithTag(container, 'img');
+    TestUtils.Simulate.click(testAvatar);
+    expect(testValue).toEqual(1);
   });
 
 });
