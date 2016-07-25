@@ -28,13 +28,18 @@ class ComponentOwner extends React.Component {
     const {formatMessage} = this.props.intl;
     const altTextMsg = this.props.data.avatarAltText ? this.props.data.avatarAltText : formatMessage(messages.avatarAltText);
     let imageStyle = 'avatar-display-img';
+    let imageSize = 120;
+    let tabValue = -1;
     if (this.props.data.avatarStyle === 'round') {
       imageStyle = imageStyle + ' avatar-display-round';
     }
-    
-    let imageSize = 120;
+
     if (this.props.data.avatarSize === 'small') {
       imageSize = 50;
+    }
+
+    if (this.props.data.avatarClick) {
+      tabValue = 0;
     }
 
     if (!this.props.data.avatarURLText || this.props.data.avatarURLText === '') {
@@ -47,7 +52,7 @@ class ComponentOwner extends React.Component {
            height={imageSize}
            width={imageSize}
            alt={altTextMsg}
-           tabIndex="0"
+           tabIndex={tabValue}
            onClick={this._click} />
     )
   }
