@@ -39,7 +39,7 @@ describe('Component Owner Suite (avatar-display)', () => {
     );
 
     expect(renderer.getRenderOutput()).toEqualJSX(
-      <img src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' className='avatar-display-img' height={50} width={50} tabIndex="0" onClick={function noRefCheck() {}} alt='Small Avatar Image' />
+      <img src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' className='avatar-display-img' height={50} width={50} tabIndex={0} onClick={function noRefCheck() {}} alt='Small Avatar Image' />
     );
   });
 
