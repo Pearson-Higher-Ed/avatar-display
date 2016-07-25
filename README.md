@@ -1,8 +1,8 @@
-# [Component Name]
+# avatar-display
 
 ## Summary
 
-[This is an executive summary of why my component exists and what it does.]
+The avatar-display component allows for the display of an avatar image and have it conform to Pearson design standards.  This component is a display-only component.
 
 ## Next Step
 
