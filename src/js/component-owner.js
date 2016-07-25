@@ -23,6 +23,12 @@ class ComponentOwner extends React.Component {
     }
   };
 
+  _enter = (event) => {
+    if (event.keyCode === 13) {
+      this._click();
+    }
+  };
+
   render() {
 
     const {formatMessage} = this.props.intl;
@@ -53,7 +59,8 @@ class ComponentOwner extends React.Component {
            width={imageSize}
            alt={altTextMsg}
            tabIndex={tabValue}
-           onClick={this._click} />
+           onClick={this._click}
+           onKeyUp={this._enter} />
     )
   }
 
