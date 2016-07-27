@@ -75,9 +75,8 @@ new AvatarDisplay({
 
 | **Option** | **Default** |**Description**|
 |----------|-------|---|
-| elementId* | ??? | The DOM element (id) in which the avatar image will be displayed |
-| avatarURLText| Some Default Image |The URL to the specific image to be displayed |
-| avatarAltText|( None) |The text to go into the image's alt attribute (for accessibility purposes). |
-| avatarSize| large |The size of the avatar image.  Must be one of: 'large' or 'small'. |
+| elementId | required | The DOM element (id) in which the avatar image will be displayed |
+| avatarURLText| Default Image |The URL to the specific image to be displayed |
+| avatarAltText|(None) |The text to go into the image's alt attribute (for accessibility purposes). |
+| avatarSize| 'large' |The size of the avatar image.  Must be one of: 'large' or 'small'. |
 | avatarClick| (None) |A function callback which is invoked on mouse clicks or enter key. |
-*required
