@@ -39,32 +39,8 @@ describe('Component Owner Suite (avatar-display)', () => {
     );
 
     expect(renderer.getRenderOutput()).toEqualJSX(
-      <img src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' className='avatar-display-img' height={50} width={50} tabIndex={0} onClick={function noRefCheck() {}} onKeyUp={function noRefCheck() {}} alt='Small Avatar Image' />
+      <img src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' className='avatar-display-img' height={50} width={50} alt='Small Avatar Image' />
     );
-  });
-
-  it('calls the click handler function when the avatar is clicked, in a document provided by jsdom', () => {
-
-    const {intl} = intlProvider.getChildContext();
-    let testValue = 0;
-    const targetData = {
-      elementId: 'test-target',
-      avatarURLText: 'http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
-      avatarAltText: 'Small Avatar Image',
-      avatarSize: 'small',
-      avatarClick: function () {
-        testValue = 1;
-      }
-    };
-    const locale = 'en';
-    const translations = {
-      'en' : {}
-    };
-
-    const container = TestUtils.renderIntoDocument(<IntlProvider locale={locale} messages={translations[locale]}><ComponentOwner data={targetData} intl={intl} /></IntlProvider>);
-    const testAvatar = TestUtils.findRenderedDOMComponentWithTag(container, 'img');
-    TestUtils.Simulate.click(testAvatar);
-    expect(testValue).toEqual(1);
   });
 
 });

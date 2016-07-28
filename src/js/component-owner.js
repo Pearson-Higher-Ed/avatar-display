@@ -8,8 +8,7 @@ class ComponentOwner extends React.Component {
     avatarURLText: PropTypes.string,
     avatarAltText: intlShape,
     avatarStyle: PropTypes.string,
-    avatarSize: PropTypes.string,
-    avatarClick: PropTypes.func
+    avatarSize: PropTypes.string
   };
 
   constructor(props) {
@@ -17,35 +16,18 @@ class ComponentOwner extends React.Component {
     super(props);
   }
 
-  _click = () => {
-    if (this.props.data.avatarClick) {
-      this.props.data.avatarClick();
-    }
-  };
-
-  _enter = (event) => {
-    if (event.keyCode === 13) {
-      this._click();
-    }
-  };
-
   render() {
 
     const {formatMessage} = this.props.intl;
     const altTextMsg = this.props.data.avatarAltText ? this.props.data.avatarAltText : formatMessage(messages.avatarAltText);
     let imageStyle = 'avatar-display-img';
     let imageSize = 120;
-    let tabValue = -1;
     if (this.props.data.avatarStyle === 'round') {
       imageStyle = imageStyle + ' avatar-display-round';
     }
 
     if (this.props.data.avatarSize === 'small') {
       imageSize = 50;
-    }
-
-    if (this.props.data.avatarClick) {
-      tabValue = 0;
     }
 
     if (!this.props.data.avatarURLText || this.props.data.avatarURLText === '') {
@@ -57,10 +39,7 @@ class ComponentOwner extends React.Component {
            className={imageStyle}
            height={imageSize}
            width={imageSize}
-           alt={altTextMsg}
-           tabIndex={tabValue}
-           onClick={this._click}
-           onKeyUp={this._enter} />
+           alt={altTextMsg} />
     )
   }
 
