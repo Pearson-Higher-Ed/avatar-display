@@ -46,8 +46,7 @@ document.body.dispatchEvent(new CustomEvent('o.InitAvatarDisplay', {
     elementId: 'demo-target1',
     avatarURLText: 'http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
     avatarAltText: 'Small Avatar Image',
-    avatarSize: 'small',
-    avatarClick: clickHandler
+    avatarSize: 'small'
   }
 }));
 ```
@@ -66,8 +65,7 @@ import AvatarDisplay from 'avatar-display';
 new AvatarDisplay({
     elementId: 'demo-target2',
     avatarAltText: 'Large Avatar Image',
-    avatarSize: 'large',
-    avatarClick: clickHandler
+    avatarSize: 'large'
 });
 ```
     
