@@ -25,10 +25,7 @@ describe('Component Owner Suite (avatar-display)', () => {
       elementId: 'test-target',
       avatarURLText: 'http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
       avatarAltText: 'Small Avatar Image',
-      avatarSize: 'small',
-      avatarClick: function () {
-        console.log('test');
-      }
+      avatarSize: 'small'
     };
 
     renderer.render(
