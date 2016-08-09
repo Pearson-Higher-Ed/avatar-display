@@ -9,11 +9,11 @@ body="{
 \"branch\":\"master\",
 \"config\": {
 \"script\": [
-\"export component=component-archetype\",
+\"export component=avatar-display\",
 \"export feature_branch=$TRAVIS_BRANCH\",
 \"chmod 777 ./src/main/shell_scripts/components.sh\",
 \"./src/main/shell_scripts/components.sh\",
-\"mvn -Dtest_suite_xml=component_archetype.xml test\"
+\"mvn -Dtest_suite_xml=avatar_display.xml test\"
 ]
 }
 }}"
