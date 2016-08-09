@@ -108,4 +108,3 @@ true $(( i++ ))
 sleep 1 #This 1s is required to poll the build status for every second
 echo "counter-> $i"
 done
-
