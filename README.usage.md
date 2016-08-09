@@ -4,7 +4,7 @@ This project supports [Node v4+](https://nodejs.org) and npm 2+ installed in you
 
 Install and save in your package.json:
 
-    npm install @pearson-components/[component-name] --save
+    npm install @pearson-components/[avatar-display] --save
 
 ## External Dependencies
 
@@ -41,7 +41,14 @@ The transpiled, minified bundle will be available in /node_modules in the compon
 Eventing example:
 
 ```js
-[EXAMPLE GOES HERE]
+document.body.dispatchEvent(new CustomEvent('o.InitAvatarDisplay', {
+  detail: {
+    elementId: 'demo-target1',
+    avatarURLText: 'http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg',
+    avatarAltText: 'Small Avatar Image',
+    avatarSize: 'small'
+  }
+}));
 ```
 
 ### or Build
@@ -51,26 +58,22 @@ There are use cases where you might need to roll the component into your applica
 CommonJS example:
 
 ```js
-[EXAMPLE GOES HERE]
-```
+import AvatarDisplay from 'avatar-display';
 
-Example webpack configuration (requires correct configuration and installation of loader dependencies):
+...
 
-```js
-[EXAMPLE GOES HERE]
+new AvatarDisplay({
+    elementId: 'demo-target2',
+    avatarAltText: 'Large Avatar Image',
+    avatarSize: 'large'
+});
 ```
     
 ### Component Configuration
 
-    [CONFIG EXAMPLE GOES HERE]
-
-### Eventing
-
-<table>
-    <tr>
-        <th>Event</th><th>detail</th>
-    </tr
-    <tr>
-        <td></td><td></td>
-    </tr>
-</table>
+| **Option** | **Default** |**Description**|
+|----------|-------|---|
+| elementId | required | The DOM element (id) in which the avatar image will be displayed |
+| avatarURLText| Default Image |The URL to the specific image to be displayed |
+| avatarAltText|(None) |The text to go into the image's alt attribute (for accessibility purposes). |
+| avatarSize| 'large' |The size of the avatar image.  Must be one of: 'large' or 'small'. |
