@@ -5,7 +5,7 @@ echo "Trigger the Selenium tests for master branch: ux-test-platform repo...."
 #Step 1: API to trigger the ux-test-platform build with the below config
 body="{
 \"request\": {
-\"message\": \"feat(component-archetype): Run Demo Tests\",
+\"message\": \"feat(avatar-display): Run avatar-display Tests\",
 \"branch\":\"master\",
 \"config\": {
 \"script\": [
@@ -108,3 +108,4 @@ true $(( i++ ))
 sleep 1 #This 1s is required to poll the build status for every second
 echo "counter-> $i"
 done
+
