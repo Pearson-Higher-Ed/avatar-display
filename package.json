@@ -1,6 +1,6 @@
 {
   "name": "@pearson-components/avatar-display",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "component to display avatar image",
   "main": "./main.js",
   "scripts": {
@@ -36,6 +36,7 @@
     "babel-preset-stage-0": "~6.5.0",
     "babel-register": "~6.7.2",
     "colors": "~1.1.2",
+    "conventional-changelog": "^1.1.0",
     "css-loader": "~0.23.0",
     "eslint": "~1.10.3",
     "eslint-loader": "~1.1.1",
