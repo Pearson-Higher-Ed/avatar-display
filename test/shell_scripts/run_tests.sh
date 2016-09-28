@@ -44,7 +44,7 @@ do
   get_state_value=${BRANCH#*:}
   BRANCH="${get_state_value//\"}"
 
-  if [ $BRANCH == "master" ] #If condition to check if the last triggered build is master
+  if [ $BRANCH == "des-489" ] #If condition to check if the last triggered build is master
     sleep 5
     curl -i $REPO_URI > test.json
   then LATEST_ID=$(grep -o '"id":.[0-9]*' test.json | head -1  | grep ':.[0-9]*') #
