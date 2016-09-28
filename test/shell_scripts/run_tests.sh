@@ -6,7 +6,7 @@ echo "Trigger the Selenium tests for master branch: ux-test-platform repo...."
 body="{
 \"request\": {
 \"message\": \"feat(avatar-display): Run avatar-display Tests\",
-\"branch\":\"master\",
+\"branch\":\"des-489\",
 \"config\": {
 \"script\": [
 \"export component=avatar-display\",
