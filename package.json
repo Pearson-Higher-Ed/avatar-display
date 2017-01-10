@@ -1,6 +1,6 @@
 {
   "name": "@pearson-components/avatar-display",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "component to display avatar image",
   "main": "./main.js",
   "scripts": {

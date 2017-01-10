@@ -1,5 +1,19 @@
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/Pearson-Higher-Ed/avatar-display/compare/v0.1.1...v0.1.2) (2017-01-10)
+
+
+### Bug Fixes
+
+* add ignore-styles as dev dependency ([26572c8](https://github.com/Pearson-Higher-Ed/avatar-display/commit/26572c8))
+* adding correct g++ compiler to address travis build failures. ([97f4178](https://github.com/Pearson-Higher-Ed/avatar-display/commit/97f4178))
+* change postinstall to copy-utils ([c551d1c](https://github.com/Pearson-Higher-Ed/avatar-display/commit/c551d1c))
+* remove formerly tracked file. ([b11b802](https://github.com/Pearson-Higher-Ed/avatar-display/commit/b11b802))
+* remove other formerly tracked files. ([31c78ae](https://github.com/Pearson-Higher-Ed/avatar-display/commit/31c78ae))
+
+
+
 <a name="0.1.1"></a>
-## 0.1.1 (2016-08-16)
+## [0.1.1](https://github.com/Pearson-Higher-Ed/avatar-display/compare/896ea18...v0.1.1) (2016-08-16)
 
 
 ### Bug Fixes
