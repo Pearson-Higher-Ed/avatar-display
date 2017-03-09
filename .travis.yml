@@ -7,7 +7,7 @@ script:
 - npm run copy-utils
 - npm run ci
 - chmod 777 ./test/shell_scripts/run_tests.sh
-- ./test/shell_scripts/run_tests.sh
+- "./test/shell_scripts/run_tests.sh"
 deploy:
   provider: npm
   email: pearson-design-accelerator@pearson.com
@@ -19,13 +19,14 @@ deploy:
     tags: true
 env:
   global:
-  - secure: tcsc9Htu4xe8TfzY9fZ93j3ChP6s0CICIOyb6usuyfCSm8oPyE0C0NxiyMn8v1tMT0teKUV1RnlMCa7IL0ukHGHQ/XI9rrPCPugQeDszgL5CQqGLkzGj3UFs20vtgyYftdv3PfSAYP7q+2HF60KHctc/D7enJup/vAJxHUDmufCB3KAT1Y7bHGUmffbEhfhOdLLdJ0En8/B+8NfXEEYVrRpfKJ84lmGplWYj3PmoPV0TYJ8dYTCZw5SUo2eQpOv7L+0s3oIbvEKfYypPHjAfNoGssfKLKYxJ/5nSYON0Ifs4X8U12JFVbx97KMN2YmjPs/1qz3UPEmHQGvaAGjtJ41DhUCrTP7JghLxool9HBh+NWsSjjicghMq36DXF5hdqkTFQFyR1sHGsjN4JQrVWcGHAnQg5Cq5MCCw+bvmx9Z2bcl5C/5r92HK71/6dBuwjtBJ5QT/dg0BV1eKqp6IuXxblMjaFMnoKUjz9nrbrWofTM5E4QiLhdGNhNeDvmw/NCU3aVHEzCDpb3A/OIhPW2qI7HIfwI9OeUQGuH5V4KFXdjl/WwcxlRi5lBike3sRGT99eNM+yIv7BdPzF76vfKr+O3dd1xeK59pBMyXcYnIaJR2IbyXS5lDe/iVsovOoJ5iy85bOWe2W08CdECdu+HovOntvUfT5vUAV8mq/Zqgc=
+  - secure: pLsaXpZVVyabZdrSy7bXuoOmdaIilsn9+BXD48gwyMFl3ZmQK6QcExC2skil0l3yf1oOHn43KAqOj+maK3Zp+0GYS+/z76wo+Fkcm/x55ZuL7gpWP/ofF//tgKx2QRglFk/b6ML9fNVQpG5LKCop9hXdEdNHiXYyBkr2gKmXXgJCVbavhSEbVOQEEIkeVI2Vu56PXT1RQ2uKht5c+/zyUedDBIAT6N8Ae2tobi2APwwKlTAffO0QQp6ChcR40wFZzBlyU7ZOuBLjqBqO5A4hyCl5JsE/J7+rInjQDMllsmcscd0NSwRsp9Yoqt0IklJwE4oeNH9wp3+88ypDHIp9iRmzup/BXOpcCRRXHlltWk2awNF2VPtvYWG8pwqcb2+jOBVDXUwm7YsYTlAsWxvje9xHaoMN3dEDX67OkIsEWtpZ/8KSOwoaOTZfLTelTlwaLlDkETj/sQ5TDXBzCtcy4GwuGaaMr1bO47YH8sVLHVkZEdI5LvKTlLuv0FD78Ko1egZRDfB90u80tzhPxJvxauSazExVi5BZzf34OBF4/o8xBCZyHC8VqKezB9Y9HHb2+7LqJ/v/HkbF2SItPOMWBfTHNEUkb1ZoGveNGTUA1tn2tFtY93iOh/fcrinwOw99jjSFIpK3CbhWnDMF1Y2QycCmdScGOk87Nmcajedyalk=
   - CXX=g++-4.8
+
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+    - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
+    - g++-4.8
 notifications:
   hipchat: qC4nmZeGuRfbDeOkanI6nmQHthVHI2lQuvC0I7pE@2846476
