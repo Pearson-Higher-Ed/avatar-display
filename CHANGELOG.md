@@ -1,5 +1,5 @@
-<a name="0.1.2"></a>
-## [0.1.2](https://github.com/Pearson-Higher-Ed/avatar-display/compare/v0.1.1...v0.1.2) (2017-01-10)
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/Pearson-Higher-Ed/avatar-display/compare/v0.1.1...v0.1.3) (2017-09-11)
 
 
 ### Bug Fixes
