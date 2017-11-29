@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "pretest": "node ./npm_scripts/pretest.js",
     "test": "node ./npm_scripts/test.js",
-    "build": "node ./npm_scripts/build.js",
+    "build": "NODE_ENV=production webpack -p",
     "lint": "node ./npm_scripts/lint.js",
     "gen-changelog": "node ./npm_scripts/gen-changelog.js",
     "version": "node ./npm_scripts/version.js",
